@@ -1,0 +1,15 @@
+/* html, body {
+    height: 120%;
+    margin: 0;
+  } */
+  
+  .BACKGROUND_IMG {
+    background-image: url("../images/pexels-mnz-1598505\ \(1\).jpg");
+    background-size: cover;
+    height: 800px;
+    margin: 0%;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    
+  }
+  
