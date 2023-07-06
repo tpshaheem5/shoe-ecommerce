@@ -12,4 +12,33 @@
     /* background-repeat: no-repeat; */
     
   }
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+  
+  h6 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  
+  button:hover {
+    background-color: #111;
+  }
   

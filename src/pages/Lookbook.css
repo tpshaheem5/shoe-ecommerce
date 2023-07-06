@@ -1,0 +1,28 @@
+.lookbook-container {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .lookbook-image img {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .lookbook-content {
+    flex: 1;
+    padding: 1rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  
+  /* Additional styles or modifications can be added as needed */
+  

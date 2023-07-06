@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from "react";
-import { myContext } from "../App.js";
+import {myContext} from '../App'
 import { useNavigate } from "react-router-dom";
 import "./Login.css"
 

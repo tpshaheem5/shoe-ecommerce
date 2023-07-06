@@ -1,9 +1,9 @@
-const products =[
+ export const  shoeProducts =[
     {
-     "title":"Nike Dunk Low SE",
+     "title":"Nike Dunk Low Premium",
      "price":10795,
      "type":"Men's Shoes",
-     "image":"https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f98de8bf-8c95-4354-b525-dd050b768209/dunk-low-se-shoes-MtkcPN.png",
+     "image":"https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/12962889-796a-4231-a522-76a7842c34f0/dunk-low-shoes-KB89bk.png",
      "id":1
     },
     {
@@ -109,7 +109,21 @@ const products =[
      "price":   16995,
      "type":"Women's Shoes",
      "image":"https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/758c805c-dde5-4df5-9780-56196bcc238a/air-jordan-1-retro-high-og-shoes-fTHb42.png",
-     "id":15
+     "id":16
     },
+    {
+        "title":"Nike Dunk High Retro",
+        "price": 7207,
+        "type":"Men's Shoes",
+        "image":"https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/946484bf-9296-4923-8968-96f50e3e4bb6/dunk-high-retro-shoes-Cg1ncq.png",
+        "id":17
+    },
+    {
+        "title":"Nike Dunk Low Next Nature",
+        "price":   8895,
+        "type":"Women's Shoes",
+        "image":"https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3dc760dd-341d-45b2-b5ab-aea99da969f8/dunk-low-next-nature-shoes-gFXm8p.png",
+        "id":15
+    }
     
 ]
