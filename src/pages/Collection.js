@@ -24,6 +24,7 @@ function Collection() {
                   <Card.Img variant="top" src={e.image} />
                   <Card.Body>
                     <Card.Title>{e.title}</Card.Title>
+                    <Card.Title>{e.type}</Card.Title>
                     <Card.Text>₹{e.price}</Card.Text>
                   </Card.Body>
                 </Card>{" "}
