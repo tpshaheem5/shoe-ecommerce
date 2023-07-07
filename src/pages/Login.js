@@ -1,8 +1,7 @@
 import React, { useContext, useRef } from "react";
-import {myContext} from '../App'
 import { useNavigate } from "react-router-dom";
-import "./Login.css"
-
+import "./Login.css";
+import { myContext } from "./Context";
 
 function Login() {
   const { user } = useContext(myContext);
@@ -18,7 +17,7 @@ function Login() {
     const foundUser = user.find((user) => user.name === nameValue);
 
     if (foundUser && foundUser.password === passwordValue) {
-      navigate("/Home"); 
+      navigate("/Home");
       console.log("Login successful");
     } else {
       alert("Invalid username or password");
@@ -27,7 +26,7 @@ function Login() {
 
   return (
     <div className="login-container">
-        <h2>Login</h2>
+      <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Username:
@@ -42,7 +41,7 @@ function Login() {
         <button type="submit">Login</button>
       </form>
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;

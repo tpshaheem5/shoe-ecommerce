@@ -1,10 +1,13 @@
-import React from 'react'
-import { Card, Button, Navbar } from 'react-bootstrap';
-import { shoeProducts } from './Products';
-import Navebar from './Navebar';
-import './Collection.css'
+import React from "react";
+import { Card } from "react-bootstrap";
+import { shoeProducts } from "./Products";
+import Navebar from "./Navebar";
+import "./Collection.css";
+import { useNavigate } from "react-router-dom";
 
 function Collection() {
+  const Navigate = useNavigate();
+  console.log(shoeProducts);
   return (
     <div>
       <div>
@@ -12,12 +15,12 @@ function Collection() {
       </div>
       <div className="container gap-5">
         <div className=" row " style={{ background: " rgb(230, 230, 217)" }}>
-          <h1 style={{ fontSize: "50px", color:'black' }}>Collections</h1>
+          <h1 style={{ fontSize: "50px", color: "black" }}>Collections</h1>
 
           {shoeProducts.map((e) => {
             return (
               <div
-                onClick={() => `/details/${e.id}`}
+                onClick={() => Navigate(`/Viewproduct/${e.id}`)}
                 className="col-lg-4 col-6 mt-3"
               >
                 <Card style={{ maxwidth: "48rem" }} className="hovereffect">
@@ -34,7 +37,7 @@ function Collection() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Collection
+export default Collection;

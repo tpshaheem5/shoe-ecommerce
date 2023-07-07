@@ -1,12 +1,16 @@
-import React from 'react'
-import { Card, Button, Navbar } from 'react-bootstrap';
-import { shoeProducts } from './Products';
+import React, { useContext } from "react";
+import { myContext } from "./Context";
+import { Card } from 'react-bootstrap';
 import Navebar from './Navebar';
+import { useNavigate } from 'react-router-dom';
 
 
 function Women() {
-  console.log("product list", shoeProducts);
-  const WomensShoe = shoeProducts.filter((e) => e.type == "Women's Shoes");
+  const {products} = useContext(myContext)
+  console.log("product list", products);
+  const WomensShoe = products.filter((e) => e.type == "Women's Shoes");
+  const Navigate = useNavigate()
+  console.log(WomensShoe);
   return (
     <div>
        <div>
@@ -19,7 +23,7 @@ function Women() {
           {WomensShoe.map((e) => {
             return (
               <div
-                onClick={() => `/details/${e.id}`}
+                onClick={() =>Navigate(`/Viewproduct/${e.id}`)}
                 className="col-lg-4 col-6 mt-3"
               >
                 <Card style={{ maxwidth: "48rem" }} className="hovereffect">

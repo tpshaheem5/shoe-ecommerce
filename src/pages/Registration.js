@@ -1,10 +1,10 @@
 import React, { useContext, useRef } from "react";
-import { myContext } from "../App.js";
 import { useNavigate } from "react-router-dom";
-import "./Registeration.css"
+import "./Registeration.css";
+import { myContext } from "./Context";
 
 function Ragisration() {
-  const { user,setUser } = useContext(myContext);
+  const { user, setUser } = useContext(myContext);
   const nameRef = useRef({});
   const passwordRef = useRef({});
   const navigate = useNavigate();
@@ -12,13 +12,15 @@ function Ragisration() {
     e.preventDefault();
     const nameValue = nameRef.current.value;
     const passwordValue = passwordRef.current.value;
-    setUser([...user,{name:nameValue,password:passwordValue,id:Date.now()}])
+    setUser([
+      ...user,
+      { name: nameValue, password: passwordValue, id: Date.now() },
+    ]);
     navigate("/Login");
     console.log(user);
-
   };
   return (
-    <div  className="registration-container">
+    <div className="registration-container">
       <h2>Registration</h2>
       <form onSubmit={handleSubmit}>
         <label>
@@ -38,4 +40,3 @@ function Ragisration() {
 }
 
 export default Ragisration;
-

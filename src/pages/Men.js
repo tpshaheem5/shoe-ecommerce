@@ -1,12 +1,14 @@
 import React, { useContext } from "react";
 import { myContext } from "./Context";
-import { Card, Button, Navbar } from "react-bootstrap";
-import { shoeProducts } from "./Products";
+import { Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import Navebar from "./Navebar";
 
 function Men() {
-  console.log("product list", shoeProducts);
-  const mensShoe = shoeProducts.filter((e) => e.type == "Men's Shoes");
+  const { products } = useContext(myContext);
+  console.log("product list", products);
+  const mensShoe = products.filter((e) => e.type == "Men's Shoes");
+  const Navigate = useNavigate();
   return (
     <div>
       <div>
@@ -14,12 +16,12 @@ function Men() {
       </div>
       <div className="container gap-5">
         <div className=" row " style={{ background: " rgb(230, 230, 217)" }}>
-          <h1 style={{ fontSize: "50px", color:'black' }}>Men</h1>
+          <h1 style={{ fontSize: "50px", color: "black" }}>Men</h1>
 
           {mensShoe.map((e) => {
             return (
               <div
-                onClick={() => `/details/${e.id}`}
+                onClick={() => Navigate(`/Viewproduct/${e.id}`)}
                 className="col-lg-4 col-6 mt-3"
               >
                 <Card style={{ maxwidth: "48rem" }} className="hovereffect">
