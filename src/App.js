@@ -11,6 +11,7 @@ import Collection from "./pages/Collection";
 import Lookbook from "./pages/Lookbook";
 import Sale from "./pages/Sale";
 import Viewproduct from "./pages/Viewproduct";
+import Cart from "./pages/Cart"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./pages/Home.css";
 
@@ -19,11 +20,12 @@ import "./pages/Home.css";
 function App() {
   const [user, setUser] = useState([]);
   const [products, setProducts] = useState(shoeProducts);
+  const [cart,setCart]=useState([])
   console.log(products);
 
   return (
     <BrowserRouter>
-      <myContext.Provider value={{ user, setUser, products, setProducts }}>
+      <myContext.Provider value={{ user, setUser, products, setProducts,cart,setCart }}>
         <div>
           <Routes>
             <Route path="/Ragistration" element={<Ragistration />} />
@@ -35,6 +37,7 @@ function App() {
             <Route path="/Lookbook" element={<Lookbook />} />
             <Route path="/Sale" element={<Sale />} />
             <Route path="/Viewproduct/:id" element={<Viewproduct />} />
+            <Route path="/Cart" element={<Cart />} />
           </Routes>
         </div>
       </myContext.Provider>
