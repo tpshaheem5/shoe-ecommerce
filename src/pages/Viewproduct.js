@@ -1,17 +1,34 @@
 import React, { useContext } from 'react';
-import { Card } from 'react-bootstrap';
-import {  useParams } from 'react-router-dom';
+import { Card,Button } from 'react-bootstrap';
+import {  useNavigate, useParams } from 'react-router-dom';
 import {myContext } from './Context';
 import './Viewproduct.css'
 import Navebar from './Navebar';
+import Login from './Login';
+
 
 
 const Viewproduct = () => {
- const { products } = useContext(myContext);
+ const { products,cart,setCart } = useContext(myContext);
+ const navigate = useNavigate()
   const { id } = useParams();
 
   const det = products.filter((e) =>  e.id == id);
   console.log(det);
+
+  
+  const addTocart = (item) => {
+    if (Login) {
+      const updatedCart = [...cart, { ...item, quantity: 1 }];
+      setCart(updatedCart);
+     
+      alert(`${item.title} successfully added to the cart!`);
+    } else {
+      navigate("/Login");
+    }
+  };
+  
+  
   
   return (
     <div>
@@ -30,8 +47,9 @@ const Viewproduct = () => {
                     <h5>{e.type}</h5>
                   </Card.Title>
                   <Card.Text>
-                    <h3>${e.price}</h3>
+                    <h3>₹{e.price}</h3>
                     <br />
+
                     <br />
                     <p className='w-75'>
                       Auctor eros suspendisse tellus venenatis sodales purus non pellentesque,
@@ -41,14 +59,14 @@ const Viewproduct = () => {
                       pellentesque, nunc sit eu, enim
                     </p>
                   </Card.Text>
-                  {/* <Button
+                  <Button
                     onClick={() => {
-                      userId !== '' ? nav(`/cart/${e.id}`) : alert('please login');
+                      addTocart(e)
                     }}
                     variant='primary'
                   >
                     ADD TO CART
-                  </Button> */}
+                  </Button>
                 </Card.Body>
               </div>
             </Card>

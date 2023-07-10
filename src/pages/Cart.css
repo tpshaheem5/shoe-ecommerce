@@ -1,64 +1,53 @@
-.Main_container{
-
-    width: 100%;
-    height: 500px;
-  
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.total{
-    margin-top: 5%;
+.yoo {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 500px;
+  height: 400px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(7, 197, 23, 0.2);
+  transition: transform 0.3s;
 }
 
-.items{
-    
-   
 
-    width: 83%;
-    height: 80%;
-   
-    overflow: auto;
-
-
+.yoo .card-img {
+  width: 500px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
 }
 
-.item{
-    padding: 10px;
-
-    border-bottom: 5px solid rgb(180, 162, 162);
-  
-    width: 100%;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    
+.yoo .card-body {
+  padding: 16px;
+  background-color: #f7f7f7;
+  border-radius: 0 0 8px 8px;
 }
-.image_container {
 
-    
-        width: 155px;
-        height: 125px;
-    
+.yoo .card-title {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: bold;
 }
-.image_container img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 
+.yoo .card-text {
+  margin-bottom: 8px;
+  font-size: 16px;
 }
-.empty_img{
-    width: 60%;
-    height: 70%;
 
+.yoo button {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
-.empty_img img {
 
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
+.yoo button:hover {
+  background-color: #555;
 }

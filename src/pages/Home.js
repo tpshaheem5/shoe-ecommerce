@@ -1,6 +1,10 @@
 import React from "react";
 import Navebar from "./Navebar";
 import { useNavigate } from "react-router-dom";
+import About from "./About";
+
+
+
 
 function Home() {
   const Navigate = useNavigate();
@@ -28,7 +32,11 @@ function Home() {
           SHOP WOMEN
         </button>
       </div>
+      <div>
+        <About/>
+      </div>
     </div>
+    
   );
 }
 

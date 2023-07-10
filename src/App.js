@@ -18,6 +18,7 @@ import "./pages/Home.css";
 
 
 function App() {
+  const [login,setLogin]=useState(false)
   const [user, setUser] = useState([]);
   const [products, setProducts] = useState(shoeProducts);
   const [cart,setCart]=useState([])
@@ -35,7 +36,6 @@ function App() {
             <Route path="/Women" element={<Women />} />
             <Route path="/Collection" element={<Collection />} />
             <Route path="/Lookbook" element={<Lookbook />} />
-            <Route path="/Sale" element={<Sale />} />
             <Route path="/Viewproduct/:id" element={<Viewproduct />} />
             <Route path="/Cart" element={<Cart />} />
           </Routes>

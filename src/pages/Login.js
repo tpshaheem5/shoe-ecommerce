@@ -4,7 +4,7 @@ import "./Login.css";
 import { myContext } from "./Context";
 
 function Login() {
-  const { user } = useContext(myContext);
+  const { user,setLogin } = useContext(myContext);
   const nameRef = useRef(null);
   const passwordRef = useRef(null);
   const navigate = useNavigate();
@@ -17,7 +17,8 @@ function Login() {
     const foundUser = user.find((user) => user.name === nameValue);
 
     if (foundUser && foundUser.password === passwordValue) {
-      navigate("/Home");
+      setLogin(true)
+      navigate("/");
       console.log("Login successful");
     } else {
       alert("Invalid username or password");
