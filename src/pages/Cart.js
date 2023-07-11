@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import { myContext } from './Context';
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import './Cart.css';
 import Navebar from './Navebar';
+import { useNavigate } from 'react-router-dom';
 
 function Cart() {
   const { cart, setCart } = useContext(myContext);
-  let cartTotal = 0;
+  const navigate = useNavigate()
+  
 
   const removeItem = (e) => {
     const removeItemId = parseInt(e.target.id);
@@ -27,6 +29,19 @@ function Cart() {
     );
     setCart(newQty);
   };
+
+  const calculateTotal = () => {
+    return cart.reduce((total, item) => total + item.price * item.qty, 0);
+  };
+   
+  const amount = calculateTotal()
+
+  // const handlePayment = () => {
+  //   // Perform payment processing here
+  //   // Assuming the payment is successful for demonstration purposes
+  //   setCart([]); // Empty the cart after successful payment
+  //   // Add your payment processing logic here
+  // };
 
   return (
     <div>
@@ -52,6 +67,16 @@ function Cart() {
               </Card.Body>
             </Card>
           ))}
+        </div>
+        <div className="payment-section">
+          {cart.length > 0 && (
+            <>
+              <h3>Total Amount: ₹{calculateTotal()}</h3>
+              <Button variant="primary" onClick={()=>navigate(`/Payment/${amount}`)}  >
+                Proceed to Payment
+              </Button>
+            </>
+          )}
         </div>
       </div>
     </div>

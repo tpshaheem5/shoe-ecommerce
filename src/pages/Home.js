@@ -2,6 +2,7 @@ import React from "react";
 import Navebar from "./Navebar";
 import { useNavigate } from "react-router-dom";
 import About from "./About";
+import Footer from "./Footer";
 
 
 
@@ -34,6 +35,9 @@ function Home() {
       </div>
       <div>
         <About/>
+      </div>
+      <div>
+        <Footer/>
       </div>
     </div>
     

@@ -14,6 +14,7 @@ import Viewproduct from "./pages/Viewproduct";
 import Cart from "./pages/Cart"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./pages/Home.css";
+import Payment from "./pages/Payment";
 
 
 
@@ -38,6 +39,7 @@ function App() {
             <Route path="/Lookbook" element={<Lookbook />} />
             <Route path="/Viewproduct/:id" element={<Viewproduct />} />
             <Route path="/Cart" element={<Cart />} />
+            <Route path="/Payment/:id" element={<Payment />} />
           </Routes>
         </div>
       </myContext.Provider>
