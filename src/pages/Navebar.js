@@ -1,10 +1,28 @@
+
 import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import {BiSolidUserPin } from "react-icons/bi"
-import "./Navebar.css"
+import { Link, useNavigate } from "react-router-dom";
+import { BiSolidUserPin, BiLogOutCircle } from "react-icons/bi";
+import {AiOutlineMessage} from "react-icons/ai"
+import { useContext } from "react";
+import "./Navebar.css";
+import { myContext } from "./Context";
+
 
 function Navebar() {
+  const { setLogin,login } = useContext(myContext);
+  const navigate = useNavigate()
+
+  const handleLogout = () => {
+    if(login){
+    setLogin(false);
+    alert('logged out successfully')
+    }else{
+      alert("please log in")
+      navigate('/Login')
+    }
+  };
+
   return (
     <div>
       <Navbar expand="lg" className="bg-body-tertiary">
@@ -29,9 +47,15 @@ function Navebar() {
                 CART
               </Link>
               <div className="login-session">
-              <Link to="/login" className="login">
-              <BiSolidUserPin />
-              </Link>
+                <Link to="/Contact" className="login">
+                <AiOutlineMessage/>
+                </Link>
+                <Link to="/login" className="login">
+                  <BiSolidUserPin />
+                </Link>
+                <Link to="#" className="login" onClick={handleLogout}>
+                  <BiLogOutCircle />
+                </Link>
               </div>
             </Nav>
           </Navbar.Collapse>

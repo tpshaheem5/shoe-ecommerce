@@ -36,12 +36,7 @@ function Cart() {
    
   const amount = calculateTotal()
 
-  // const handlePayment = () => {
-  //   // Perform payment processing here
-  //   // Assuming the payment is successful for demonstration purposes
-  //   setCart([]); // Empty the cart after successful payment
-  //   // Add your payment processing logic here
-  // };
+ 
 
   return (
     <div>

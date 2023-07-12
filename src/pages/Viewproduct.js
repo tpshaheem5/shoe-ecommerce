@@ -7,7 +7,7 @@ import Navebar from './Navebar';
 import Login from './Login';
 
 const Viewproduct = () => {
-  const { products, cart, setCart } = useContext(myContext);
+  const { products, cart, setCart,login } = useContext(myContext);
   const navigate = useNavigate();
   const { id } = useParams();
 
@@ -15,7 +15,9 @@ const Viewproduct = () => {
   console.log(det);
 
   const addTocart = (item) => {
-    const existingItem = cart.find((cartItem) => cartItem.id === item.id);
+    console.log(login);
+    if(login) {
+      const existingItem = cart.find((cartItem) => cartItem.id === item.id);
     if (existingItem) {
       alert('Product is already in the cart');
     } else {
@@ -26,8 +28,11 @@ const Viewproduct = () => {
       } else {
         navigate('/Login');
       }
-    }
-  };
+    }}else{
+      alert("please login first")
+      navigate('/Login');
+
+  }};
 
   return (
     <div>

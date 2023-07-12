@@ -14,7 +14,7 @@ import Cart from "./pages/Cart"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./pages/Home.css";
 import Payment from "./pages/Payment";
-// import Contact from "./pages/Contact";
+import Contact from "./pages/Contact";
 
 
 
@@ -23,7 +23,7 @@ function App() {
   const [user, setUser] = useState([]);
   const [products, setProducts] = useState(shoeProducts);
   const [cart,setCart]=useState([])
-  console.log(products);
+  // console.log(products);
 
   return (
     <BrowserRouter>
@@ -40,7 +40,7 @@ function App() {
             <Route path="/Viewproduct/:id" element={<Viewproduct />} />
             <Route path="/Cart" element={<Cart />} />
             <Route path="/Payment/:id" element={<Payment />} />
-            {/* <Route path="/Contact" element={<Contact />} /> */}
+            <Route path="/Contact" element={<Contact />} />
           </Routes>
         </div>
       </myContext.Provider>

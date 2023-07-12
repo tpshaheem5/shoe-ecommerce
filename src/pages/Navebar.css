@@ -2,3 +2,18 @@
     margin-left: 600px;
     
 }
+.login-session {
+    display: flex;
+    align-items: center;
+  }
+  
+  .login-session .login {
+    margin-left: 20px;
+    font-size: 25px;
+    color: rgb(78, 73, 73);
+  }
+  
+  .login-session .login:hover {
+    color: red;
+  }
+  

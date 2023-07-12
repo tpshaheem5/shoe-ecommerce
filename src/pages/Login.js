@@ -1,11 +1,11 @@
-import React, { useContext, useRef } from "react";
+import React, {useContext, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { myContext } from "./Context";
 import { Link } from "react-router-dom";
 
 function Login() {
-  const { user,setLogin } = useContext(myContext);
+  const { user,setLogin,login } = useContext(myContext);
   const nameRef = useRef(null);
   const passwordRef = useRef(null);
   const navigate = useNavigate();
@@ -16,14 +16,17 @@ function Login() {
     const passwordValue = passwordRef.current.value;
 
     const foundUser = user.find((user) => user.name === nameValue);
+    console.log(login);
 
     if (foundUser && foundUser.password === passwordValue) {
       setLogin(true)
+      console.log(login);
       navigate("/");
       alert("Login successful");
     } else {
       alert("Invalid username or password");
     }
+
   };
 
   return (

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaTwitter, FaPinterest } from 'react-icons/fa';
 import './Footer.css';
+import Contact from './Contact';
 
 function Footer() {
   return (
@@ -29,7 +30,7 @@ function Footer() {
             <ul>
               <li><a href="/About">About Us</a></li>
               <li><a href="/">Our Team</a></li>
-              <li><a href="/Footer">Contact Us</a></li>
+              <li><a href="/Contact">Contact Us</a></li>
             </ul>
           </div>
           <div className="footer-section">
