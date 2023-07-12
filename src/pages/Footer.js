@@ -9,15 +9,12 @@ function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <h3>Secure Payment</h3>
-            {/* <p>Shop with confidence using secure payment methods.</p> */}
           </div>
           <div className="footer-section">
             <h3>Express Shipping</h3>
-            {/* <p>Fast and reliable shipping for all your orders.</p> */}
           </div>
           <div className="footer-section">
             <h3>Free Return</h3>
-            {/* <p>Enjoy hassle-free returns on your purchases.</p> */}
           </div>
           <div className="footer-section">
             <h3>Shop</h3>

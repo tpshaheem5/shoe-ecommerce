@@ -9,12 +9,12 @@ import Women from "./pages/Women";
 import Men from "./pages/Men";
 import Collection from "./pages/Collection";
 import Lookbook from "./pages/Lookbook";
-import Sale from "./pages/Sale";
 import Viewproduct from "./pages/Viewproduct";
 import Cart from "./pages/Cart"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./pages/Home.css";
 import Payment from "./pages/Payment";
+// import Contact from "./pages/Contact";
 
 
 
@@ -27,10 +27,10 @@ function App() {
 
   return (
     <BrowserRouter>
-      <myContext.Provider value={{ user, setUser, products, setProducts,cart,setCart }}>
+      <myContext.Provider value={{ user, setUser,login,setLogin, products, setProducts,cart,setCart }}>
         <div>
           <Routes>
-            <Route path="/Ragistration" element={<Ragistration />} />
+            <Route path="/Registration" element={<Ragistration />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/" element={<Home />} />
             <Route path="/Men" element={<Men />} />
@@ -40,6 +40,7 @@ function App() {
             <Route path="/Viewproduct/:id" element={<Viewproduct />} />
             <Route path="/Cart" element={<Cart />} />
             <Route path="/Payment/:id" element={<Payment />} />
+            {/* <Route path="/Contact" element={<Contact />} /> */}
           </Routes>
         </div>
       </myContext.Provider>

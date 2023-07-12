@@ -1,6 +1,8 @@
 import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import {BiSolidUserPin } from "react-icons/bi"
+import "./Navebar.css"
 
 function Navebar() {
   return (
@@ -26,6 +28,11 @@ function Navebar() {
               <Link to="/Cart" className="nav-link">
                 CART
               </Link>
+              <div className="login-session">
+              <Link to="/login" className="login">
+              <BiSolidUserPin />
+              </Link>
+              </div>
             </Nav>
           </Navbar.Collapse>
         </Container>

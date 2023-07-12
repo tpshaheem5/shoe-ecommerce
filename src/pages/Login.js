@@ -2,6 +2,7 @@ import React, { useContext, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { myContext } from "./Context";
+import { Link } from "react-router-dom";
 
 function Login() {
   const { user,setLogin } = useContext(myContext);
@@ -19,7 +20,7 @@ function Login() {
     if (foundUser && foundUser.password === passwordValue) {
       setLogin(true)
       navigate("/");
-      console.log("Login successful");
+      alert("Login successful");
     } else {
       alert("Invalid username or password");
     }
@@ -41,6 +42,11 @@ function Login() {
         <br />
         <button type="submit">Login</button>
       </form>
+      <div>
+  <h6 style={{ color: "black" }}>
+    Don't have an account? <Link to="/Registration">Create</Link>
+  </h6>
+</div>
     </div>
   );
 }
