@@ -8,7 +8,7 @@ function About() {
     
     <div className="lookbook-container">
       <div className="lookbook-image">
-        <img src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_626,c_limit/90fd75ee-4ca3-44ee-a3f6-d5a09a8d88a7/nike-lookbook.jpg" alt="Lookbook Image" />
+        <img src="https://i.pinimg.com/originals/20/0a/38/200a38110ab67bbce2fc0feab5faa47f.jpg" alt="Lookbook Image" />
       </div>
       <div className="lookbook-content">
         <h3>About Us</h3>

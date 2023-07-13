@@ -10,12 +10,21 @@ import { myContext } from "./Context";
 
 
 function Navebar() {
-  const { setLogin,login } = useContext(myContext);
+  const { setLogin,login,setCart } = useContext(myContext);
   const navigate = useNavigate()
+
+  // const aa=()=>{
+  //   if(login){
+     
+  //   }else{
+  //     alert("please login ")
+  //   }
+  // }
 
   const handleLogout = () => {
     if(login){
     setLogin(false);
+    setCart([])
     alert('logged out successfully')
     }else{
       alert("please log in")
@@ -43,7 +52,7 @@ function Navebar() {
               <Link to="/Lookbook" className="nav-link">
                 LOOKBOOK
               </Link>
-              <Link to="/Cart" className="nav-link">
+              <Link to='/Cart' className="nav-link">
                 CART
               </Link>
               <div className="login-session">
@@ -54,7 +63,7 @@ function Navebar() {
                   <BiSolidUserPin />
                 </Link>
                 <Link to="#" className="login" onClick={handleLogout}>
-                  <BiLogOutCircle />
+            {login ?<BiLogOutCircle/>:null}
                 </Link>
               </div>
             </Nav>

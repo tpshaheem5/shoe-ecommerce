@@ -1,6 +1,8 @@
 import React from 'react';
 import { RiShoppingCart2Line, RiInformationLine } from 'react-icons/ri';
 import './Contact.css';
+import Navebar from './Navebar';
+
 
 function Contact() {
   return (

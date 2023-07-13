@@ -28,7 +28,7 @@ function Footer() {
           <div className="footer-section">
             <h3>About</h3>
             <ul>
-              <li><a href="/About">About Us</a></li>
+              <li><a href="#About">About Us</a></li>
               <li><a href="/">Our Team</a></li>
               <li><a href="/Contact">Contact Us</a></li>
             </ul>

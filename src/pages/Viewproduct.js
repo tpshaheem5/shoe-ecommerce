@@ -11,7 +11,7 @@ const Viewproduct = () => {
   const navigate = useNavigate();
   const { id } = useParams();
 
-  const det = products.filter((e) => e.id == id);
+  const det = products.filter((e) => e.id === parseInt(id) );
   console.log(det);
 
   const addTocart = (item) => {

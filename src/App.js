@@ -15,6 +15,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./pages/Home.css";
 import Payment from "./pages/Payment";
 import Contact from "./pages/Contact";
+import Adminlogin from "./Admin/Adminlogin";
 
 
 
@@ -41,6 +42,7 @@ function App() {
             <Route path="/Cart" element={<Cart />} />
             <Route path="/Payment/:id" element={<Payment />} />
             <Route path="/Contact" element={<Contact />} />
+            <Route path="/Adminlogin" element={<Adminlogin />} />
           </Routes>
         </div>
       </myContext.Provider>
