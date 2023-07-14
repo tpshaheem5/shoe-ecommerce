@@ -4,6 +4,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { BiSolidUserPin, BiLogOutCircle } from "react-icons/bi";
 import {AiOutlineMessage} from "react-icons/ai"
+import {RiAdminFill} from 'react-icons/ri'
 import { useContext } from "react";
 import "./Navebar.css";
 import { myContext } from "./Context";
@@ -60,10 +61,13 @@ function Navebar() {
                 <AiOutlineMessage/>
                 </Link>
                 <Link to="/login" className="login">
-                  <BiSolidUserPin />
+                  <BiSolidUserPin />  
                 </Link>
                 <Link to="#" className="login" onClick={handleLogout}>
             {login ?<BiLogOutCircle/>:null}
+                </Link>
+                <Link to="/Adminlogin" className="login">
+                  <RiAdminFill />
                 </Link>
               </div>
             </Nav>

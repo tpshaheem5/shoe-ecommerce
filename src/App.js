@@ -16,6 +16,8 @@ import "./pages/Home.css";
 import Payment from "./pages/Payment";
 import Contact from "./pages/Contact";
 import Adminlogin from "./Admin/Adminlogin";
+import Adminproducts from "./Admin/Adminproducts";
+import Sidebar from "./Admin/Sidebar";
 
 
 
@@ -24,11 +26,12 @@ function App() {
   const [user, setUser] = useState([]);
   const [products, setProducts] = useState(shoeProducts);
   const [cart,setCart]=useState([])
+  const [admin,setAdmin]=useState({username:'admin',password:'admin123'})
   // console.log(products);
 
   return (
     <BrowserRouter>
-      <myContext.Provider value={{ user, setUser,login,setLogin, products, setProducts,cart,setCart }}>
+      <myContext.Provider value={{ user, setUser,login,setLogin, products, setProducts,cart,setCart,admin,setAdmin }}>
         <div>
           <Routes>
             <Route path="/Registration" element={<Ragistration />} />
@@ -43,6 +46,8 @@ function App() {
             <Route path="/Payment/:id" element={<Payment />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Adminlogin" element={<Adminlogin />} />
+            {/* <Route path="/Sidebar" element={<Sidebar />} /> */}
+            <Route path="/Adminproducts" element={<Adminproducts />} />
           </Routes>
         </div>
       </myContext.Provider>
