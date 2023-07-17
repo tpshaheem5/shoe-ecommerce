@@ -1,13 +1,16 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import { shoeProducts } from "./Products";
+// import { shoeProducts } from "./Products";
 import Navebar from "./Navebar";
 import "./Collection.css";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { myContext } from "./Context";
 
 function Collection() {
+  const{products}=useContext(myContext)
   const Navigate = useNavigate();
-  console.log(shoeProducts);
+  // console.log(shoeProducts);
   return (
     <div>
       <div>
@@ -17,7 +20,7 @@ function Collection() {
         <div className=" row " style={{ background: " rgb(230, 230, 217)" }}>
           <h1 style={{ fontSize: "50px", color: "black" }}>Collections</h1>
 
-          {shoeProducts.map((e) => {
+          {products.map((e) => {
             return (
               <div
                 onClick={() => Navigate(`/Viewproduct/${e.id}`)}

@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { myContext } from '../pages/Context';
+import './Addproduct.css';
 
 function AddProduct() {
   const { products, setProducts } = useContext(myContext);
@@ -28,7 +29,7 @@ function AddProduct() {
     }
 
     // Generate a unique ID for the new product
-    const newProductId = Date.now().toString();
+    const newProductId = Date.now();
 
     // Create the new product object
     const newProductData = {
@@ -39,10 +40,10 @@ function AddProduct() {
       image: newProduct.image,
     };
 
-    
+    // Add the new product to the products list
     setProducts([...products, newProductData]);
 
-    
+    // Clear the form fields
     setNewProduct({
       title: '',
       type: '',
@@ -54,32 +55,28 @@ function AddProduct() {
   };
 
   return (
-    <div>
+    <div className="add-product-container">
       <h3>Add New Product</h3>
       <form onSubmit={handleSubmit}>
         <label>
           Title:
           <input type="text" name="title" value={newProduct.title} onChange={handleChange} required />
         </label>
-        <br />
 
         <label>
           Type:
           <input type="text" name="type" value={newProduct.type} onChange={handleChange} required />
         </label>
-        <br />
 
         <label>
           Price:
           <input type="number" name="price" value={newProduct.price} onChange={handleChange} required />
         </label>
-        <br />
 
         <label>
           Image URL:
           <input type="text" name="image" value={newProduct.image} onChange={handleChange} required />
         </label>
-        <br />
 
         <button type="submit">Add Product</button>
       </form>
