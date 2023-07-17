@@ -13,6 +13,9 @@ function Sidebar() {
         <li className="sidebar-item">
           <Link to="/Adminusers">Users</Link>
         </li>
+        <li className="sidebar-item">
+          <Link to="/Addproduct">Add Product</Link>
+        </li>
       </ul>
     </div>
     

@@ -57,14 +57,14 @@ function Navebar() {
                 CART
               </Link>
               <div className="login-session">
+                <Link to="#" className="login" onClick={handleLogout}>
+            {login ?<BiLogOutCircle/>:null}
+                </Link>
                 <Link to="/Contact" className="login">
                 <AiOutlineMessage/>
                 </Link>
                 <Link to="/login" className="login">
                   <BiSolidUserPin />  
-                </Link>
-                <Link to="#" className="login" onClick={handleLogout}>
-            {login ?<BiLogOutCircle/>:null}
                 </Link>
                 <Link to="/Adminlogin" className="login">
                   <RiAdminFill />

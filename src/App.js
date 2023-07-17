@@ -17,7 +17,9 @@ import Payment from "./pages/Payment";
 import Contact from "./pages/Contact";
 import Adminlogin from "./Admin/Adminlogin";
 import Adminproducts from "./Admin/Adminproducts";
-import Sidebar from "./Admin/Sidebar";
+import Updateproduct from "./Admin/Updateproduct";
+import AddProduct from "./Admin/Addproduct";
+
 
 
 
@@ -27,7 +29,7 @@ function App() {
   const [products, setProducts] = useState(shoeProducts);
   const [cart,setCart]=useState([])
   const [admin,setAdmin]=useState({username:'admin',password:'admin123'})
-  // console.log(products);
+ 
 
   return (
     <BrowserRouter>
@@ -46,8 +48,9 @@ function App() {
             <Route path="/Payment/:id" element={<Payment />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Adminlogin" element={<Adminlogin />} />
-            {/* <Route path="/Sidebar" element={<Sidebar />} /> */}
             <Route path="/Adminproducts" element={<Adminproducts />} />
+            <Route path="/Updateproduct/:id" element={<Updateproduct />} />
+            <Route path="/Addproduct" element={<AddProduct />} />
           </Routes>
         </div>
       </myContext.Provider>
