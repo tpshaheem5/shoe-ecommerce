@@ -11,10 +11,10 @@ function Sidebar() {
           <Link to="/Adminproducts">Products</Link>
         </li>
         <li className="sidebar-item">
-          <Link to="/Adminusers">Users</Link>
+          <Link to="/Addproduct">Add Product</Link>
         </li>
         <li className="sidebar-item">
-          <Link to="/Addproduct">Add Product</Link>
+          <Link to="/Adminusers">Users</Link>
         </li>
       </ul>
     </div>

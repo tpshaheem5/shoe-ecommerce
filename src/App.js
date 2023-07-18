@@ -19,6 +19,7 @@ import Adminlogin from "./Admin/Adminlogin";
 import Adminproducts from "./Admin/Adminproducts";
 import Updateproduct from "./Admin/Updateproduct";
 import AddProduct from "./Admin/Addproduct";
+import Adminusers from "./Admin/Adminusers";
 
 
 
@@ -51,6 +52,7 @@ function App() {
             <Route path="/Adminproducts" element={<Adminproducts />} />
             <Route path="/Updateproduct/:id" element={<Updateproduct />} />
             <Route path="/Addproduct" element={<AddProduct />} />
+            <Route path="/Adminusers" element={<Adminusers />} />
           </Routes>
         </div>
       </myContext.Provider>
