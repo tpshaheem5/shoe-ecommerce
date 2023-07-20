@@ -24,8 +24,18 @@ function About() {
         <h3>
   Surround yourself with softness. Our latest version of the Infinity Run stacks soft and springy React foam extra high to cushion each step. Keep the comfort coming with layers of lightweight performance fabric that wick away sweat to keep you dry.</h3>
       </div>
-      <div className="lookbook-image">
+      <div className="lookbook-image mt-4">
         <img src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_626,c_limit/94a39cb7-65d5-4113-a9e9-61f1f032e9e4/nike-lookbook.jpg" alt="Lookbook Image" />
+      </div>
+    </div>
+
+    <div className="lookbook-container">
+      <div className="lookbook-content">
+        <h3>how nike shoes are made</h3>
+        <h3>
+        Nike employs skilled engineers and designers, encouraging them to embrace disruption and create innovative products. The company provides the design and materials to hundreds of factories around the world. Even though it's not a sustainable brand yet, it does use recycled and organic cotton, hemp, bamboo and other environmentally friendly materials. Most shoes, however, are made of leather, rubber, polyester and plastic. The leather comes from corn-fed cattle.  <br/> <br/>These materials are shipped by air and sea to over 500 factories in China and other countries. Most of its shoes are made through a cold cement assembly process, which requires more energy than vulcanization. The shoe upper, which encases the foot, is attached to the shoe using water-based glue. Mechanical force is applied to stretch the product and give it structural strength.
+        <br/><br/>The shoes are typically made of EVA foam, lightweight plastic and mesh fabrics. The materials that go to waste are recycled and used for the manufacturing of other products, such as rubber playgrounds and shoe boxes. According to Nike, more than 75 percent of its goods contain recycled materials. The company aims to achieve zero footwear manufacturing waste and cut its environmental impact by half.
+        </h3>
       </div>
     </div>
     </div>

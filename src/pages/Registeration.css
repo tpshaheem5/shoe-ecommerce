@@ -1,45 +1,52 @@
+/* Registration.css */
+
+/* Main container */
 .registration-container {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-    background-image: none;
-  }
-  
-  .registration-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .registration-container form label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .registration-container form input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-  }
-  
-  .registration-container form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #000000;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .registration-container form button:hover {
-    background-color: #5f5a5a;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button styles */
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 500px) {
+  .registration-container {
+    max-width: 100%;
   }
 
-  
-  
+  form input {
+    margin-bottom: 10px;
+  }
+}

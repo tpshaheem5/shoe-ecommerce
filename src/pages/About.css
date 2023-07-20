@@ -1,33 +1,46 @@
+/* About.css */
+
+/* Main container */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Lookbook container */
 .lookbook-container {
-    margin-top: 90px;
-    padding: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+/* Lookbook content */
+.lookbook-content {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.lookbook-content h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Lookbook image */
+.lookbook-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 800px) {
+  .about-container {
+    padding: 10px;
   }
-  
-  .lookbook-image img {
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .lookbook-content {
-    flex: 1;
-    padding: 1rem;
-  }
-  h3 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 0.5rem;
-  }
-  
+}
+
+@media screen and (max-width: 600px) {
   .lookbook-content h3 {
-    margin-top: 1rem;
+    font-size: 18px;
   }
-  
-  
-  /* Additional styles or modifications can be added as needed */
-  
+}

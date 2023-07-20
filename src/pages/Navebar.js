@@ -40,7 +40,7 @@ function Navebar() {
           <Navbar.Brand href="/">PLASHOE</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className=" w-100">
               <Link to="/Men" className="nav-link">
                 MEN
               </Link>
@@ -56,7 +56,7 @@ function Navebar() {
               <Link to='/Cart' className="nav-link">
                 CART
               </Link>
-              <div className="login-session">
+              <div className="ms-auto heyy ">
                 <Link to="#" className="login" onClick={handleLogout}>
             {login ?<BiLogOutCircle/>:null}
                 </Link>

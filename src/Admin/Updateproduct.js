@@ -9,6 +9,7 @@ function Updateproduct() {
   const { id } = useParams();
 
   const editProduct = products.find((product) => product.id === parseInt(id));
+  
 
   const submit = (e) => {
     e.preventDefault();
@@ -31,7 +32,7 @@ function Updateproduct() {
 
     setProducts(updatedProducts);
     // Clear the input fields
-    e.target.reset();
+    // e.target.reset();
   };
 
   if (!editProduct) {

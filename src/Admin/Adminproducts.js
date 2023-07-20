@@ -16,14 +16,6 @@ function Adminproducts() {
     console.log(`Deleting product with ID: ${productId}`);
   };
 
-  // const handleUpdateProduct = (productId) => {
-  //   const productToUpdate = products.find((product) => product.id === productId);
-
-  //   // Perform your update product logic here
-  //   console.log(`Updating product with ID: ${productId}`);
-  //   console.log('Product Details:', productToUpdate);
-  // };
-
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }} className="admin-products-container">
       <Sidebar />
