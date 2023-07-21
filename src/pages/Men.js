@@ -7,7 +7,7 @@ import Navebar from "./Navebar";
 function Men() {
   const { products } = useContext(myContext);
   console.log("product list", products);
-  const mensShoe = products.filter((e) => e.type == "Men's Shoes");
+  const mensShoe = products.filter((e) => e.type === "Men's Shoes");
   const Navigate = useNavigate();
   return (
     <div>

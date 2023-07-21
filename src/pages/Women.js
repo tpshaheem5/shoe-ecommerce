@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 function Women() {
   const {products} = useContext(myContext)
   console.log("product list", products);
-  const WomensShoe = products.filter((e) => e.type == "Women's Shoes");
+  const WomensShoe = products.filter((e) => e.type === "Women's Shoes");
   const Navigate = useNavigate()
   console.log(WomensShoe);
   return (

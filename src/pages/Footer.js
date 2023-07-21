@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaTwitter, FaPinterest } from 'react-icons/fa';
 import './Footer.css';
-import Contact from './Contact';
+//import Contact from './Contact';
 
 function Footer() {
   return (
